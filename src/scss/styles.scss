@@ -1,0 +1,65 @@
+
+// Import all of Bootstrap's CSS
+
+@import "~bootstrap/scss/bootstrap";
+
+@import 'bootstrap-icons/font/bootstrap-icons.css';
+
+/**
+ * overrides
+**/
+
+input { 
+    box-shadow: none;
+}
+
+/**
+ * layout
+**/
+
+div.card {
+    margin-bottom: 1em;
+}
+
+/**
+ * text/hash inputs
+**/
+
+$border-color: $gray-700;
+
+.input-group { 
+    margin-bottom: 5px;
+}
+
+span.input-group-text { 
+    min-width: 160px;
+    border: 1px solid $border-color;
+}
+
+input.form-control { 
+    border: 1px solid $border-color;
+}
+
+.plain-text-message-label { 
+    color: #000000;
+    background-color: $gray-300;
+}
+
+.hash-of-message-label { 
+    color: #FFFFFF;
+    background-color: $gray-500;
+}
+
+.miner-data { 
+    color: #000000;
+    background-color: $orange-300;
+}
+
+/**
+ * form elements
+**/
+
+.btn { 
+    margin-bottom: initial;
+}
+
