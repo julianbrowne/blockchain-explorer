@@ -13,7 +13,7 @@ The `dist` folder contains a bundled/compressed js file called `blockchain-explo
 
 	<script type="text/javascript" src="{{path-to-dist}}/blockchain-explorer.js"></script>
 
-This creates a global object called `blockchainExplorer` with four methods. You can see all four methods running in the [test page](test/index.html)
+This creates a global object called `blockchainExplorer` with four methods. You can see all four methods running in the [test page](https://julianbrowne.github.io/blockchain-explorer/test/)
 
 HTML elements are created at the same point the script is called and inserted after the `<script>` tag
 
