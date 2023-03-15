@@ -1,8 +1,16 @@
 
 const selectors = { 
 
+	/**
+	 * Basic Hash
+	**/
+
 	basicHashMessageInputId: "basic-hash-message",
 	basicHashDigestOutputId: "basic-hash-digest",
+
+	/**
+	 * Chain of Hashes
+	**/
 
 	hashChainMessagePrefix: "hash-chain-message-",
 	hashChainDigestPrefix: "hash-chain-digest-",
