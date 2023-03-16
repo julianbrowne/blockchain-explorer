@@ -9,7 +9,7 @@ import {config} from "./config";
 import {utils} from "./utils";
 import * as dom from "./dom";
 import {selectors} from "./selectors";
-import {Miner} from "./miner";
+import {Miner} from "./Miner";
 
 function BlockchainExplorer() { 
 
@@ -543,7 +543,7 @@ function BlockchainExplorer() {
 
 		const button = dom.button("mine", "btn-primary");
 
-		button.click(miner);
+		button.on("click", miner);
 
 		topHashInputGroup.append(button);
 
