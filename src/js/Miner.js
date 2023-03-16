@@ -13,7 +13,7 @@ function Miner(blockData, targetHashPrefix, updateDisplayFunction) {
 	this.mineAttempts = 0;
 	this.maxAttempts = 250000;
 	this.success = null;
-	this.digest = null;
+	this.hash = null;
 
 	function matchingHash(hash, target) { 
 		return (hash.substr(0, target.length) === target);
@@ -31,15 +31,15 @@ function Miner(blockData, targetHashPrefix, updateDisplayFunction) {
 
 		// generate latest hash
 
-		miner.digest = utils.hash(this.blockData + miner.mineAttempts);
+		miner.hash = utils.hash(this.blockData + miner.mineAttempts);
 
 		// update display callback with latest hash
 
-		updateDisplayFunction(miner.digest, miner.mineAttempts);
+		updateDisplayFunction(miner.hash, miner.mineAttempts);
 
 		// check for match to target
 
-		if(matchingHash(miner.digest, miner.targetHashPrefix)) { 
+		if(matchingHash(miner.hash, miner.targetHashPrefix)) { 
 			miner.success = true;
 			return;
 		}
