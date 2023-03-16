@@ -56,10 +56,6 @@ function Miner(blockData, targetHashPrefix, updateDisplayFunction) {
 
 	};
 
-	this.done = function(successFunction) { 
-		miner.success = successFunction;
-	};
-
 };
 
 export {Miner};
