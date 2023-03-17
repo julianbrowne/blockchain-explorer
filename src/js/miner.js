@@ -51,8 +51,8 @@ function Miner(blockData, targetHashPrefix, updateDisplayFunction) {
 			return;
 		}
 
-		await sleep(1);
-		miner.mine();
+		await sleep(1); // this is to create a better visual
+		await miner.mine();
 
 	};
 
