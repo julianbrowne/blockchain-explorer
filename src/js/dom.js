@@ -72,6 +72,11 @@ function inputCluster(title, inputData, labelClass) {
 	const group = inputGroup();
 	const label = inputGroupLabel(title, labelClass);
 	const input = inputElement(inputData);
+
+	group.onKeyupChain = function(f) { 
+		input.on("keyup", f);
+	};
+
 	group.append(label).append(input);
 	return group;
 };
@@ -117,6 +122,14 @@ function textHashCombo(title, data) {
 	inputGroup1.append(label1).append(input1);
 
 	container.append(inputGroup1);
+
+	container.onKeyupChain = function(f) { 
+		input1.on("keyup", f);
+	};
+
+	container.getHashValue = function() { 
+		return input1.val();
+	};
 
 	/**
 	 * input group2 - hash output
